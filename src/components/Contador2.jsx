@@ -5,7 +5,7 @@ const Contador2 = ({ valor: valorInicial = 25, min, max, step }) => {
   valorInicial = Math.max(Math.min(valorInicial, max), min)
   const [valor, setValor] = useState(valorInicial)
 
-  const operar = (operacion) => {
+  const handleOperar = (operacion) => {
     switch (operacion) {
       case 'sumar':
         return Math.min(valor + step, max)
@@ -21,13 +21,13 @@ const Contador2 = ({ valor: valorInicial = 25, min, max, step }) => {
       <h1>Contador versión 2</h1>
       <h2>El valor es: {valor}</h2>
       <button
-        onClick={() => setValor(operar('sumar'))}
+        onClick={() => setValor(handleOperar('sumar'))}
       >+</button>
       <button
-        onClick={() => setValor(operar('restar'))}
+        onClick={() => setValor(handleOperar('restar'))}
       >-</button>
       <button
-        onClick={() => setValor(operar('reiniciar'))}
+        onClick={() => setValor(handleOperar('reiniciar'))}
       >Reset</button>
     </>
   )
