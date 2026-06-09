@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
-import Boton from './Boton'
+import Boton3 from './Boton3'
 
 const Contador3 = ({ valor: valorInicial = 25, min, max, step }) => {
   valorInicial = Math.max(Math.min(valorInicial, max), min)
@@ -14,9 +14,9 @@ const Contador3 = ({ valor: valorInicial = 25, min, max, step }) => {
     <div>
       <h2>Contador versión 3</h2>
       <h3>El valor es: {valor}</h3>
-      <Boton etiqueta='+' funcion={handleSumar} disableCondition={valor >= max} />
-      <Boton etiqueta='-' funcion={handleRestar} disableCondition={valor <= min} />
-      <Boton etiqueta='Reset' funcion={handleReset} disableCondition={valor === valorInicial} />
+      <Boton3 etiqueta='+' funcion={handleSumar} disableCondition={valor >= max} />
+      <Boton3 etiqueta='-' funcion={handleRestar} disableCondition={valor <= min} />
+      <Boton3 etiqueta='Reset' funcion={handleReset} disableCondition={valor === valorInicial} />
     </div>
   )
 }
