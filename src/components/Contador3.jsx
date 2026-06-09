@@ -11,13 +11,13 @@ const Contador3 = ({ valor: valorInicial = 25, min, max, step }) => {
   const handleReset = (ev) => setValor((valor) => valorInicial)
 
   return (
-    <>
-      <h1>Contador versión 3</h1>
-      <h2>El valor es: {valor}</h2>
+    <div>
+      <h2>Contador versión 3</h2>
+      <h3>El valor es: {valor}</h3>
       <Boton etiqueta='+' funcion={handleSumar} disableCondition={valor >= max} />
       <Boton etiqueta='-' funcion={handleRestar} disableCondition={valor <= min} />
       <Boton etiqueta='Reset' funcion={handleReset} disableCondition={valor === valorInicial} />
-    </>
+    </div>
   )
 }
 

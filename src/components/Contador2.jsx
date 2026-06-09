@@ -16,9 +16,9 @@ const Contador2 = ({ valor: valorInicial = 25, min, max, step }) => {
   }
 
   return (
-    <>
-      <h1>Contador versión 2</h1>
-      <h2>El valor es: {valor}</h2>
+    <div>
+      <h2>Contador versión 2</h2>
+      <h3>El valor es: {valor}</h3>
       <button
         disabled={valor >= max}
         data-operacion='sumar'
@@ -34,7 +34,7 @@ const Contador2 = ({ valor: valorInicial = 25, min, max, step }) => {
         data-operacion='reiniciar'
         onClick={handleOperar}
       >Reset</button>
-    </>
+    </div>
   )
 }
 
