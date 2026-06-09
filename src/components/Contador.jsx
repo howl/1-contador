@@ -14,12 +14,15 @@ const Contador = ({ valor: valorInicial = 25, min, max, step }) => {
       <h1>Contador versión 1</h1>
       <h2>El valor es: {valor}</h2>
       <button
+        disabled={valor >= max}
         onClick={handleSumar}
       >+</button>
       <button
+        disabled={valor <= min}
         onClick={handleRestar}
       >-</button>
       <button
+        disabled={valor === valorInicial}
         onClick={handleReset}
       >Reset</button>
     </>

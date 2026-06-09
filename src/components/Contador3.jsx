@@ -14,9 +14,9 @@ const Contador3 = ({ valor: valorInicial = 25, min, max, step }) => {
     <>
       <h1>Contador versión 3</h1>
       <h2>El valor es: {valor}</h2>
-      <Boton etiqueta='+' funcion={handleSumar} />
-      <Boton etiqueta='-' funcion={handleRestar} />
-      <Boton etiqueta='Reset' funcion={handleReset} />
+      <Boton etiqueta='+' funcion={handleSumar} disableCondition={valor >= max} />
+      <Boton etiqueta='-' funcion={handleRestar} disableCondition={valor <= min} />
+      <Boton etiqueta='Reset' funcion={handleReset} disableCondition={valor === valorInicial} />
     </>
   )
 }

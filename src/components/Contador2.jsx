@@ -20,14 +20,17 @@ const Contador2 = ({ valor: valorInicial = 25, min, max, step }) => {
       <h1>Contador versión 2</h1>
       <h2>El valor es: {valor}</h2>
       <button
+        disabled={valor >= max}
         data-operacion='sumar'
         onClick={handleOperar}
       >+</button>
       <button
+        disabled={valor <= min}
         data-operacion='restar'
         onClick={handleOperar}
       >-</button>
       <button
+        disabled={valor === valorInicial}
         data-operacion='reiniciar'
         onClick={handleOperar}
       >Reset</button>
